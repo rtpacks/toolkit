@@ -13,11 +13,33 @@
     "isolatedModules": true,
     "noEmit": true,
 
+    /* custom */
+    "types": ["vite/client", "vitest/globals"],
+    "paths": {
+      "@rtpacks/vue": ["./packages/use/src/register.ts"],
+      "@rtpacks/react": ["./packages/use/src/nuxt.ts"],
+      "@rtpacks/form": ["./packages/components/src/*/index.ts"],
+      "@rtpacks/*": ["./packages/*/index.ts"],
+      "@/*": ["./packages/*"]
+    },
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "allowJs": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true
   },
-  "include": ["src"]
+  "include": [
+    "meta",
+    "scripts",
+    "packages",
+    "vitest.config.ts",
+    "packages/.vitepress/**/*.ts",
+    "packages/.vitepress/**/*.vue",
+    "*.{ts,vue}"
+  ],
+  "exclude": ["**/dist/**", "**/node_modules/**", "coverage"]
 }
