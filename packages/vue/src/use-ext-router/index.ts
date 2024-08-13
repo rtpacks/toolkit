@@ -49,10 +49,7 @@ export const useExtRouter = (router: Router) => {
    * @param defaultRoute
    * @param level
    */
-  const goBackOrDefault = (
-    defaultRoute: RouteLocationRaw,
-    level = 1
-  ): void | never => {
+  const goBackOrDefault = (defaultRoute: RouteLocationRaw, level = 1): void | never => {
     if (window?.history?.length > level) {
       router.back();
     } else if (defaultRoute) {
