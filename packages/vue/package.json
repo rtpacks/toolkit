@@ -27,5 +27,9 @@
   "files": [
     "*.d.ts",
     "dist"
-  ]
+  ],
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
+  }
 }
