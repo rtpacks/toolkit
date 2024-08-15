@@ -25,6 +25,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+      - name: Setup Install
+        run: pnpm install
       # lint
       - name: Lint
         run: pnpm lint
@@ -44,6 +46,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+      - name: Setup Install
+        run: pnpm install
       # test
       - name: Test
         run: pnpm test
