@@ -10,23 +10,23 @@ export const alias: Alias[] = [
     replacement: resolve(__dirname, "../packages"),
   },
   {
-    find: "@rtpacks/core",
+    find: "@rtpackx/core",
     replacement: resolve(__dirname, "../packages/core/index"),
   },
   {
-    find: "@rtpacks/vue",
+    find: "@rtpackx/vue",
     replacement: resolve(__dirname, "../packages/vue/index"),
   },
   {
-    find: /^@rtpacks\/vue\/(.*)$/,
+    find: /^@rtpackx\/vue\/(.*)$/,
     replacement: resolve(__dirname, "../packages/vue/src/$1/index"),
   },
   {
-    find: "@rtpacks/react",
+    find: "@rtpackx/react",
     replacement: resolve(__dirname, "../packages/react/index"),
   },
   {
-    find: "@rtpacks/form",
+    find: "@rtpackx/form",
     replacement: resolve(__dirname, "../packages/form/index"),
   },
 ];
