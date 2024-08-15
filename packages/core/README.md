@@ -1,3 +1,3 @@
-## @rtpacks/core
+## @rtpackx/core
 
 通用工具

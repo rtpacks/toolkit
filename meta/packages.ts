@@ -26,12 +26,12 @@ export interface PackageManifest {
 }
 
 export const packages: PackageManifest[] = [
-  // @rtpacks/core
+  // @rtpackx/core
   {
     entry: "packages/core/index.ts",
     outDir: "packages/core/dist",
   },
-  // @rtpacks/vue
+  // @rtpackx/vue
   {
     entry: "packages/vue/index.ts",
     outDir: "packages/vue/dist",

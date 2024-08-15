@@ -1,5 +1,5 @@
 {
-  "name": "@rtpacks/monorepo",
+  "name": "@rtpackx/monorepo",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -18,24 +18,18 @@
   "keywords": [
     "vue",
     "react",
-    "composables"
+    "composition"
   ],
   "scripts": {
     "test": "pnpm install && vitest --coverage",
-    "test:ui": "pnpm test -- --ui",
-    "test-build": "pnpm build && vitest --mode test-build",
-    "test-build:ui": "pnpm test-build --ui",
-    "test-release": "pnpm test-tsc && pnpm test-build --run && pnpm build-dts",
     "test-coverage": "pnpm install && vitest --run",
-    "test-tsc": "pnpm install && vitest --run && vue-tsc --project tsconfig.tsc.json --noEmit",
-    "dev": "pnpm docs:dev",
     "docs:dev": "pnpm udd && pnpm bdd && vitepress dev packages --host",
-    "docs:build": "pnpm udd && pnpm bdd && pnpm build && vitepress build packages",
     "docs:preview": "pnpm docs:build && vitepress preview packages --host",
+    "docs:build": "pnpm udd && pnpm bdd && pnpm build && vitepress build packages",
+    "build": "pnpm install && tsx scripts/build.ts",
+    "release": "npx bumpp -r --no-push",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
-    "build": "pnpm install && tsx scripts/build.ts",
-    "release": "pnpm test-release && npx bumpp -r --no-tag --no-push",
     "lint-staged": "npx lint-staged",
     "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "preinstall": "npx only-allow pnpm",
@@ -47,7 +41,6 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@eslint/js": "^9.9.0",
     "@rollup/pluginutils": "^5.1.0",
-    "@rtpacks/vue": "workspace:*",
     "@shikijs/vitepress-twoslash": "^1.12.1",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash-es": "^4.17.12",

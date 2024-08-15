@@ -5,17 +5,28 @@ import type { Alias } from "vite";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export const alias: Alias[] = [
-  { find: "mixte", replacement: resolve(__dirname, "../packages/mixte/index") },
   {
-    find: "@mixte/use/nuxt",
-    replacement: resolve(__dirname, "../packages/use/src/nuxt"),
+    find: "@",
+    replacement: resolve(__dirname, "../packages"),
   },
   {
-    find: "@mixte/use",
-    replacement: resolve(__dirname, "../packages/use/index"),
+    find: "@rtpackx/core",
+    replacement: resolve(__dirname, "../packages/core/index"),
   },
   {
-    find: /^@mixte\/components\/(.*)$/,
-    replacement: resolve(__dirname, "../packages/components/src/$1/index"),
+    find: "@rtpackx/vue",
+    replacement: resolve(__dirname, "../packages/vue/index"),
+  },
+  {
+    find: /^@rtpackx\/vue\/(.*)$/,
+    replacement: resolve(__dirname, "../packages/vue/src/$1/index"),
+  },
+  {
+    find: "@rtpackx/react",
+    replacement: resolve(__dirname, "../packages/react/index"),
+  },
+  {
+    find: "@rtpackx/form",
+    replacement: resolve(__dirname, "../packages/form/index"),
   },
 ];

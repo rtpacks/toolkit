@@ -16,10 +16,11 @@
     /* custom */
     "types": ["vite/client", "vitest/globals"],
     "paths": {
-      "@rtpacks/vue": ["./packages/use/src/register.ts"],
-      "@rtpacks/react": ["./packages/use/src/nuxt.ts"],
-      "@rtpacks/form": ["./packages/components/src/*/index.ts"],
-      "@rtpacks/*": ["./packages/*/index.ts"],
+      "@rtpackx/core": ["./packages/core/index.ts"],
+      "@rtpackx/vue": ["./packages/vue/index.ts"],
+      "@rtpackx/react": ["./packages/react/index.ts"],
+      "@rtpackx/form": ["./packages/form/index.ts"],
+      "@rtpackx/*": ["./packages/*/index.ts"],
       "@/*": ["./packages/*"]
     },
 
