@@ -1,3 +1,7 @@
+## [0.0.2-beta.3](https://github.com/rtpacks/toolkit/compare/v0.0.2-beta.2...v0.0.2-beta.3) (2024-08-16)
+
+
+
 ## [0.0.2-beta.2](https://github.com/rtpacks/toolkit/compare/v0.0.2-beta.1...v0.0.2-beta.2) (2024-08-16)
 
 
