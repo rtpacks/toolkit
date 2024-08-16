@@ -1,7 +1,7 @@
 {
   "name": "@rtpackx/monorepo",
   "type": "module",
-  "version": "0.0.2-beta.4",
+  "version": "0.0.2-beta.5",
   "private": true,
   "description": "实用工具",
   "packageManager": "pnpm@9.7.0",
