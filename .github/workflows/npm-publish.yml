@@ -3,7 +3,7 @@ name: Node.js Package
 on:
   push:
     tags:
-      - "v*" # for bumpp
+      - v* # for bumpp
 
 jobs:
   publish:
