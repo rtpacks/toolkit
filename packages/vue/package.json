@@ -1,7 +1,7 @@
 {
   "name": "@rtpackx/vue",
   "type": "module",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2-beta.2",
   "author": "MF <https://github.com/rtpacks>",
   "license": "MIT",
   "homepage": "https://github.com/rtpacks/toolkit#readme",

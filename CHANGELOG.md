@@ -1,4 +1,4 @@
-## 0.0.1 (2024-08-16)
+## [0.0.2-beta.1](https://github.com/rtpacks/toolkit/compare/3c1625e21437b6b530148cc5254f5e402353eba3...v0.0.2-beta.1) (2024-08-16)
 
 
 ### Features
