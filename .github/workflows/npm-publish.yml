@@ -3,7 +3,7 @@ name: Node.js Package
 on:
   push:
     tags:
-      - v* # for bumpp
+      - "v*" # for bumpp
 
 jobs:
   publish:
@@ -15,13 +15,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+          cache: pnpm
       - name: Setup Install
         run: pnpm install
       # build
@@ -29,7 +30,7 @@ jobs:
         run: pnpm build
         env:
           NODE_OPTIONS: --max-old-space-size=6144
-      # publish
+      # npm-publish
       - name: Publish Beta
         if: contains(github.event.release.name, 'beta') == true
         run: pnpm publish -r --access public --no-git-checks --tag beta
@@ -40,3 +41,22 @@ jobs:
         run: pnpm publish -r --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # github release
+      - name: Github Release
+        uses: softprops/action-gh-release@v2
+        with:
+          # files: |
+          #   CHANGELOG.md
+          #   LICENSE
+          generate_release_notes: true
+      # Run Codeball on all new Pull Requests and Review Comments! 🚀
+      # For customizations and more documentation, see https://github.com/sturdy-dev/codeball-action
+      # For all configuration options see https://github.com/sturdy-dev/codeball-action/blob/v2/action.yml
+      - name: Codeball
+        uses: sturdy-dev/codeball-action@v2
+        with:
+          approvePullRequests: "true"
+          labelPullRequestsWhenApproved: "false"
+          labelPullRequestsWhenReviewNeeded: "true"
+          failJobsWhenReviewNeeded: "true"
+          codeSuggestionsFromComments: "true"
