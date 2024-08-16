@@ -1,3 +1,12 @@
+## [0.0.2-beta.2](https://github.com/rtpacks/toolkit/compare/v0.0.2-beta.1...v0.0.2-beta.2) (2024-08-16)
+
+
+### Bug Fixes
+
+* **workflow:** fix the incorrect tags value provided in the YML configuration file ([8bf93b0](https://github.com/rtpacks/toolkit/commit/8bf93b088d14b7277d9c7e7d34e5025e834bf230))
+
+
+
 ## [0.0.2-beta.1](https://github.com/rtpacks/toolkit/compare/3c1625e21437b6b530148cc5254f5e402353eba3...v0.0.2-beta.1) (2024-08-16)
 
 
