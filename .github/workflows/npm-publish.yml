@@ -5,6 +5,9 @@ on:
     tags:
       - "v*" # for bumpp
 
+permissions:
+  contents: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
