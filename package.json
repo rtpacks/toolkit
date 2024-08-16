@@ -27,7 +27,7 @@
     "docs:preview": "pnpm docs:build && vitepress preview packages --host",
     "docs:build": "pnpm udd && pnpm bdd && pnpm build && vitepress build packages",
     "build": "pnpm install && tsx scripts/build.ts",
-    "release": "npx bumpp -r --no-push",
+    "release": "pnpm changelog && tsx scripts/release.ts",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
     "lint-staged": "npx lint-staged",
