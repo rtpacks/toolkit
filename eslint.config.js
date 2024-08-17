@@ -10,6 +10,6 @@ export default [
   ...eslint_ts.configs.recommended,
   eslintPluginPrettierRecommended,
   {
-    rules: { "@typescript-eslint/no-explicit-any": "off" },
+    rules: { "@typescript-eslint/no-explicit-any": "warn", "@typescript-eslint/no-unused-vars": "warn" },
   },
 ];
