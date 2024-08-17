@@ -1,3 +1,15 @@
+## [0.0.3](https://github.com/rtpacks/toolkit/compare/v0.0.2...v0.0.3) (2024-08-17)
+
+
+### Features
+
+* **core:** add indexdb function, which provides the IndexDB encapsulation ([599ac18](https://github.com/rtpacks/toolkit/commit/599ac1870134ad4fc1f97eac7145e8d7b719fb1c))
+* **core:** add use-spliter hook, which provides the function of splicing or splitting strings based on the delimiter ([624c011](https://github.com/rtpacks/toolkit/commit/624c01139fb5da520ba17573c37fc90b2c805930))
+* **core:** exports and docs ([9971206](https://github.com/rtpacks/toolkit/commit/9971206cec6fed9207fd452187807921601dfa62))
+* **core:** move monitor file ([d3a8d32](https://github.com/rtpacks/toolkit/commit/d3a8d32cdc809a12307c24c167b0c1b8095639e4))
+
+
+
 ## [0.0.2](https://github.com/rtpacks/toolkit/compare/v0.0.2-beta.7...v0.0.2) (2024-08-16)
 
 
