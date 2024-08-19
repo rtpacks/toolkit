@@ -1,6 +1,6 @@
 import { isString, isFunction } from "lodash-es";
+import type { Unit } from "../utils";
 
-export type Unit = string | number;
 export type TransFormFn<T extends Unit = Unit> = (v: string, index: number, arr: string[]) => T;
 
 export default function useSpliter(spliter = ":") {
