@@ -1,3 +1,13 @@
+## [0.0.4](https://github.com/rtpacks/toolkit/compare/v0.0.3...v0.0.4) (2024-08-19)
+
+
+### Features
+
+* **core:** add utils, which provides common function and types definition ([38f1d7a](https://github.com/rtpacks/toolkit/commit/38f1d7a5023d4738ff1c0b885abc00e8e06068e0))
+* **utils:** add utils package, which provides common utils and types definition ([d8f2361](https://github.com/rtpacks/toolkit/commit/d8f23612f967455245b6206ba6013c3777a11304))
+
+
+
 ## [0.0.3](https://github.com/rtpacks/toolkit/compare/v0.0.2...v0.0.3) (2024-08-17)
 
 
