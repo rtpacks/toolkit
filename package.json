@@ -28,6 +28,7 @@
     "docs:build": "pnpm udd && pnpm bdd && pnpm build && vitepress build packages",
     "build": "pnpm install && tsx scripts/build.ts",
     "release": "pnpm changelog && tsx scripts/release.ts",
+    "push": "git push && git push --tags",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
     "lint-staged": "npx lint-staged",
