@@ -1,3 +1,0 @@
-## @rtpackx/utils
-
-Common utils

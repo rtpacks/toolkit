@@ -37,9 +37,4 @@ export const packages: PackageManifest[] = [
     outDir: "packages/vue/dist",
     external: ["vue-router"],
   },
-  // @rtpackx/utils
-  {
-    entry: "packages/utils/index.ts",
-    outDir: "packages/utils/dist",
-  },
 ];
