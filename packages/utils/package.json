@@ -1,0 +1,35 @@
+{
+  "name": "@rtpackx/utils",
+  "type": "module",
+  "version": "0.0.3",
+  "author": "MF <https://github.com/rtpacks>",
+  "license": "MIT",
+  "homepage": "https://github.com/rtpacks/toolkit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtpacks/toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rtpacks/toolkit/issues"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "*.d.ts",
+    "dist"
+  ],
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
+  }
+}
