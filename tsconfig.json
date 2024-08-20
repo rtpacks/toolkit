@@ -26,12 +26,14 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "allowJs": true,
     "strictNullChecks": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+
+    /* dts */
+    "declaration": true,
+    "declarationMap": true
   },
   "include": [
     "meta",
