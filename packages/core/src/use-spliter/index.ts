@@ -5,9 +5,8 @@ export type TransFormFn<T extends Unit = Unit> = (v: string, index: number, arr:
 
 /**
  * A custom hook to manage string splitting and joining using a delimiter.
- *
+ * @public
  * @param spliter - The delimiter used for string operations. Default is ":".
- *
  * @returns An object containing the following methods:
  * - splice(prev: Unit, next: Unit): Joins two units with the specified delimiter.
  * - split<T extends Unit = Unit>(v: string, transform?: TransFormFn<T>): T[] | never: Splits a string into an array of units using the delimiter. Applies an optional transformation function.
@@ -15,7 +14,7 @@ export type TransFormFn<T extends Unit = Unit> = (v: string, index: number, arr:
  *
  * @example
  * ```typescript
- * import useSpliter from '@rtpacks/core';
+ * import useSpliter from '@rtpackx/core';
  *
  * const toNumber = (value: string) => parseInt(value, 10);
  * const { splice, split, take } = useSpliter();
