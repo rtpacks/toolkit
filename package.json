@@ -27,6 +27,7 @@
     "docs:preview": "pnpm docs:build && vitepress preview packages --host",
     "docs:build": "pnpm udd && pnpm bdd && pnpm build && vitepress build packages",
     "build": "pnpm install && tsx scripts/build.ts",
+    "build:dts": "pnpm install && tsx scripts/build-dts.ts",
     "release": "pnpm changelog && tsx scripts/release.ts",
     "push": "git push && git push --tags",
     "lint": "npx eslint .",

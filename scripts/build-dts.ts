@@ -19,7 +19,7 @@ export async function build_dts() {
     const bundle = await rollup({
       input: pkg.entry,
       external: externals,
-      plugins: [dts({ respectExternal: true })],
+      plugins: [dts()],
     });
 
     await bundle.write({
