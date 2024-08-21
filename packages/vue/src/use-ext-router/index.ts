@@ -66,5 +66,3 @@ export const useExtRouter = (router: Router) => {
     goBackOrDefault,
   };
 };
-
-export default useExtRouter;

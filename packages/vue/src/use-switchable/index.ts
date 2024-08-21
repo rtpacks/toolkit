@@ -1,6 +1,6 @@
 import { ref } from "vue";
 
-export default function useSwitchable(initValue = false) {
+export function useSwitchable(initValue = false) {
   const switchable = ref(initValue);
   const setSwitchable = (value: boolean) => {
     switchable.value = value;

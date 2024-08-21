@@ -37,7 +37,7 @@ const genDefaultTreeOption = (): TreeOption => ({
   },
 });
 
-export default function useTree(_nodes: INode[], option: Partial<TreeOption> = genDefaultTreeOption()) {
+export function useTree(_nodes: INode[], option: Partial<TreeOption> = genDefaultTreeOption()) {
   option = merge(option, genDefaultTreeOption());
   const { fieldNames } = option as TreeOption;
 

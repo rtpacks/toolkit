@@ -95,5 +95,3 @@ export function useReplaceState(router: Router) {
     replaceRouteQuery,
   };
 }
-
-export default useReplaceState;
