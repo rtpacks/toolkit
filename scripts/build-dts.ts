@@ -1,9 +1,10 @@
 import { dirname, resolve } from "node:path";
 import { exec } from "node:child_process";
 import { fileURLToPath } from "node:url";
-import { rollup } from "rollup";
+import { Plugin, rollup } from "rollup";
 import fs from "fs-extra";
 import dts from "rollup-plugin-dts";
+import progress from "rollup-plugin-progress";
 import fg from "fast-glob";
 import { packages } from "../meta/packages";
 
@@ -23,7 +24,7 @@ export async function build_dts() {
       input: pkg.entry,
       external: externals,
       // plugins: [dts({ respectExternal: true })],
-      plugins: [dts()],
+      plugins: [dts(), progress({ clearLine: false }) as Plugin],
     });
 
     await bundle.write({
