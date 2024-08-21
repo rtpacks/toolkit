@@ -32,7 +32,7 @@ export type TransFormFn<T extends Unit = Unit> = (v: string, index: number, arr:
  * console.log(firstElement); // Output: "orange"
  * ```
  */
-export default function useSpliter(spliter = ":") {
+export function useSpliter(spliter = ":") {
   /**
    * Joins two units with the specified delimiter.
    * @param prev
