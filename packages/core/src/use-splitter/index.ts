@@ -14,10 +14,10 @@ export type TransFormFn<T extends Unit = Unit> = (v: string, index: number, arr:
  *
  * @example
  * ```typescript
- * import useSpliter from '@rtpackx/core';
+ * import useSplitter from '@rtpackx/core';
  *
  * const toNumber = (value: string) => parseInt(value, 10);
- * const { splice, split, take } = useSpliter();
+ * const { splice, split, take } = useSplitter();
  *
  * const joinedString = splice('apple', 'banana');
  * console.log(joinedString); // Output: "apple:banana"
@@ -32,7 +32,7 @@ export type TransFormFn<T extends Unit = Unit> = (v: string, index: number, arr:
  * console.log(firstElement); // Output: "orange"
  * ```
  */
-export function useSpliter(spliter = ":") {
+export function useSplitter(spliter = ":") {
   /**
    * Joins two units with the specified delimiter.
    * @param prev
