@@ -23,9 +23,9 @@
   "scripts": {
     "test": "pnpm install && vitest --coverage",
     "test-coverage": "pnpm install && vitest --run",
-    "docs:dev": "pnpm udd && pnpm bdd && vitepress dev packages --host",
-    "docs:preview": "pnpm docs:build && vitepress preview packages --host",
-    "docs:build": "pnpm udd && pnpm bdd && pnpm build && vitepress build packages",
+    "docs:dev": "vitepress dev packages",
+    "docs:preview": "vitepress preview packages",
+    "docs:build": "vitepress build packages",
     "build": "pnpm install && tsx scripts/build.ts",
     "build:dts": "pnpm install && tsx scripts/build-dts.ts",
     "build:doc": "pnpm install && tsx scripts/build-dts.ts && tsx scripts/build-doc.ts",
