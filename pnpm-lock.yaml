@@ -180,6 +180,9 @@ importers:
 
   packages/vue:
     dependencies:
+      '@rtpackx/core':
+        specifier: workspace:*
+        version: link:../core
       vue:
         specifier: ^3.0.0
         version: 3.4.37(typescript@5.5.4)
