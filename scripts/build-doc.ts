@@ -60,7 +60,9 @@ async function build_api_doc() {
     const pkg_path = resolve(root, `packages/${name}`);
     // fs.removeSync(resolve(root, `${pkg_path}/index.md`));
     // console.log(resolve(root, `${pkg_path}/index.md`))
-    exec(`api-documenter markdown --input-folder ${pkg_path}/dist --output-folder ${root}/docs/${name}`);
+    exec(
+      `api-documenter markdown --input-folder ${pkg_path}/dist --output-folder ${root}/packages/docs/${name}`,
+    );
   }
 }
 
