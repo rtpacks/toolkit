@@ -85,6 +85,13 @@ export const genFieldNames = (defaultValue?: Partial<FieldNames>): FieldNames =>
 export const PrivateID = "__pid__";
 export type UnionPrivateID<T> = T & { [PrivateID]: string };
 export type IterFn<T> = (value: T, index: number, arr: T[]) => UnionPrivateID<T>;
+
+/**
+ * 将给定的数组的每个元素按照指定的方法处理元素
+ * @param arr
+ * @param iter
+ * @returns
+ */
 export const unionPrivateId = <T = Record<string, any>>(arr: T[], iter: IterFn<T>): UnionPrivateID<T>[] => {
   return arr.map(iter);
 };
@@ -116,7 +123,10 @@ export const inRangeFn = (
 /**
  * 在 template 格式化中，`v as any` 可能影响 template 代码块的高亮，使用 `(v as any)` 时，prettier 会将其变为 `v as any`，导致高亮问题。
  * 当然，可以选择使用 `(v, v as any)` 方式避免自动格式化去掉括号
- * @param {any} value
- * @returns {any}
+ *
+ * @public
+ * @param value - The other type
+ * @returns value as any
+ *
  */
 export const asAnyType = (value: any): any => value;
