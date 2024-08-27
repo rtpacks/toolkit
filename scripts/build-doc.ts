@@ -1,7 +1,7 @@
 // https://www.cnblogs.com/rongfengliang/p/16269305.html
 
 import { dirname, resolve } from "node:path";
-import { exec } from "node:child_process";
+import { execSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import fs from "fs-extra";
 import { Extractor, ExtractorConfig, ExtractorResult, IConfigFile } from "@microsoft/api-extractor";
@@ -58,17 +58,21 @@ async function build_api_doc() {
   for (const pkg of packages) {
     const { name, outDir } = pkg;
     const pkg_path = resolve(root, `packages/${name}`);
-    // fs.removeSync(resolve(root, `${pkg_path}/index.md`));
-    // console.log(resolve(root, `${pkg_path}/index.md`))
-    exec(
+    execSync(
       `api-documenter markdown --input-folder ${pkg_path}/dist --output-folder ${root}/packages/docs/${name}`,
     );
   }
 }
 
+async function build_external() {
+  // copy changelog
+  execSync(`cp ${resolve(root, "CHANGELOG.md")} ${resolve(root, "packages/docs/")}`);
+}
+
 export async function build_doc() {
   await build_api_json();
   await build_api_doc();
+  await build_external();
 }
 
 build_doc();
