@@ -28,6 +28,9 @@
     "*.d.ts",
     "dist"
   ],
+  "dependencies": {
+    "@rtpackx/core": "workspace:*"
+  },
   "peerDependencies": {
     "vue": "^3.0.0",
     "vue-router": "^4.0.0"

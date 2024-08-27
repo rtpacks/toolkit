@@ -1,7 +1,6 @@
 import { ref, computed } from "vue";
 import { merge } from "lodash-es";
-
-export type Unit = string | number;
+import { Unit } from "@rtpackx/core";
 
 export interface INode {
   id: Unit;
