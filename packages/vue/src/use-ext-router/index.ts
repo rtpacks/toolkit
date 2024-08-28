@@ -1,13 +1,18 @@
 import { RouteLocationRaw, Router, RouteRecordRaw } from "vue-router";
 
+/**
+ * 拓展 vue-router 的工具函数
+ * @param router
+ * @returns
+ */
 export const useExtRouter = (router: Router) => {
   /**
-   * @function useExtRouter 退出登陆后，需要清空路由
-   * @param {Router} router
-   * @param {string[]} excludes name | path
-   * @description
-   * 在登录情况下，用户一定存在404路由用来显示不存在的或被过滤的路由页面，同时由于404路由应该放在异步路由后面
-   * 所以在重置router时，需要清除404路由以避免后续添加异步路由时添加到404路由后面
+   * 退出登陆后，需要清空路由
+   * @param router - Router 路由器
+   * @param excludes - name | path，给定的 excludes 路由不会被删除
+   * @example
+   * 正常情况下，404 路由用来匹配不存在(或被过滤)的路由，并且路由器中的 404 路由是处于所有路由之后的，这样才能避免 404 错误匹配问题。
+   * 当路由器存在 404 路由并且需要添加路由时，就可以利用 resetRouter 删除原有路由并添加新路由，以避免后续添加异步路由时添加在 404 路由之后
    */
   const resetRouter = (excludes: string[]) => {
     const routes = router.getRoutes();
@@ -19,7 +24,7 @@ export const useExtRouter = (router: Router) => {
   };
 
   /**
-   * 删除嵌套路由
+   * 给定常用的嵌套路由结构，使用 deppDelete 可以通过 routeName 删除路由器中存在的路由
    * @param route
    */
   const deepDelete = (route: RouteRecordRaw) => {
@@ -28,7 +33,7 @@ export const useExtRouter = (router: Router) => {
   };
 
   /**
-   * 添加嵌套路由
+   * 给定常用的嵌套路由结构，使用 addRoutes 可以添加路由
    * @param routes
    */
   const addRoutes = (routes: RouteRecordRaw[], prev_excludes?: string[]) => {
@@ -46,8 +51,8 @@ export const useExtRouter = (router: Router) => {
 
   /**
    * 回退路由，增加回退校验
-   * @param defaultRoute
-   * @param level
+   * @param defaultRoute - 当路由栈不足以回退时，可以跳转到指定的路由
+   * @param level - 当路由栈中路由数量满足该属性时才会出栈
    */
   const goBackOrDefault = (defaultRoute: RouteLocationRaw, level = 1): void | never => {
     if (window?.history?.length > level) {
@@ -55,7 +60,7 @@ export const useExtRouter = (router: Router) => {
     } else if (defaultRoute) {
       router.push(defaultRoute);
     } else {
-      throw new Error("跳转失败");
+      throw new Error("Jump failed: No additional or default route available.");
     }
   };
 
