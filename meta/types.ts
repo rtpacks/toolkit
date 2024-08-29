@@ -28,6 +28,11 @@ export interface PackageManifest {
 
 export interface DocBuildConfig {
   apiExtractor?: {
-    includes: string[];
+    includes?: string[];
+    excludes?: string[];
   };
+}
+
+export interface PackageConfig {
+  docBuildConfig: DocBuildConfig;
 }
