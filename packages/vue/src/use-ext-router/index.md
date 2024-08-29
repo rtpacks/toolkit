@@ -1,5 +1,7 @@
 # useExtRouter
 
+拓展 vue-router 的工具函数
+
 ## Signature
 
 ```typescript
@@ -69,7 +71,7 @@ const addRoutes = (routes: RouteRecordRaw[], prev_excludes?: string[]) => {
 };
 ```
 
-### addRoutes
+### goBackOrDefault
 
 回退路由，增加回退校验
 
