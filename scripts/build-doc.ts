@@ -90,11 +90,11 @@ async function build_manual_api_json() {
       const lib_path = resolve(pkg_path, `src/${lib_name}`);
 
       execSync(`cd ${lib_path} && npx tsc index.ts  --declaration --emitDeclarationOnly`);
-      console.log(`tsc ${lib} completed successfully`);
+      console.log(`tsc ${lib} completed successfully ✔`);
 
       // api-extractor building, only the pkg_config exists will generate
       if (!exists_config) continue;
-      if (!pkg_config?.docBuildConfig.apiExtractor?.includes?.length) continue;
+      if (!pkg_config?.docBuildConfig.apiExtractor?.includes?.includes(lib_name)) continue;
 
       // parse the api-extractor.json file
       const extractorConfig: ExtractorConfig = ExtractorConfig.prepare({
