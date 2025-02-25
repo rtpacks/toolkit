@@ -1,3 +1,7 @@
+## [0.0.6](https://github.com/rtpacks/toolkit/compare/v0.0.5...v0.0.6) (2025-02-25)
+
+
+
 ## [0.0.5](https://github.com/rtpacks/toolkit/compare/v0.0.4...v0.0.5) (2025-02-25)
 
 
