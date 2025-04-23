@@ -30,6 +30,7 @@
     "build:dts": "pnpm install && tsx scripts/build-dts.ts",
     "release": "pnpm changelog && tsx scripts/release.ts",
     "push": "git push && git push --tags",
+    "publish": "pnpm release && pnpm push",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
     "lint-staged": "npx lint-staged",
