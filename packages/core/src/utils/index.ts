@@ -63,13 +63,17 @@ export interface ListResults<T = unknown> {
   count: number;
 }
 
+export type AnyKey = keyof any;
+
 export interface FieldNames {
   label: string;
   value: string;
   key: string;
   icon: string;
   name: string;
+  count: string;
   children: string;
+  [k: string]: any;
 }
 export type PartialFieldNames = Partial<FieldNames>;
 export const genFieldNames = (defaultValue?: Partial<FieldNames>): FieldNames => ({
@@ -79,6 +83,7 @@ export const genFieldNames = (defaultValue?: Partial<FieldNames>): FieldNames =>
   icon: "icon",
   name: "name",
   children: "children",
+  count: "count",
   ...(defaultValue || {}),
 });
 
