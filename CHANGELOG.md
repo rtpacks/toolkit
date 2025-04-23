@@ -1,3 +1,12 @@
+## [0.0.7](https://github.com/rtpacks/toolkit/compare/v0.0.6...v0.0.7) (2025-04-23)
+
+
+### Features
+
+* **core:** add AnyKey type ([5cf31e0](https://github.com/rtpacks/toolkit/commit/5cf31e08de295211df4fa90e20e4b833344031cb))
+
+
+
 ## [0.0.6](https://github.com/rtpacks/toolkit/compare/v0.0.5...v0.0.6) (2025-02-25)
 
 
