@@ -1,3 +1,12 @@
+## [0.0.8](https://github.com/rtpacks/toolkit/compare/v0.0.7...v0.0.8) (2025-04-24)
+
+
+### Features
+
+* **core:** enhance types and add utility functions ([6897cb7](https://github.com/rtpacks/toolkit/commit/6897cb771c963d997e1cf2b03f0ff4d76d0b980c))
+
+
+
 ## [0.0.7](https://github.com/rtpacks/toolkit/compare/v0.0.6...v0.0.7) (2025-04-23)
 
 
