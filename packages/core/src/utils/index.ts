@@ -6,19 +6,38 @@ export type UnionNone<T> = UnionNull<T> | UnionUndefined<T>;
 export type DeepPartial<T> = {
   [K in keyof T]?: DeepPartial<T[K]>;
 };
+
+/**
+ * 错误特征
+ */
 export interface ErrorTrait<T = boolean> {
   error: T;
 }
 
+/**
+ * 所有 key 类型
+ */
 export type Key = keyof any;
+export type AnyKey = keyof any;
+
+/**
+ * 单元类型
+ */
 export type Unit<T = unknown> = T extends unknown ? string | number : string | number | T;
 
+/**
+ * 常见的 Option 类型，不足之处可使用继承拓展
+ */
 export interface IOption<T extends Unit = Unit> {
   key: string | number;
   label: string;
   value: T;
   [k: string]: unknown;
 }
+
+/**
+ * 常见的 TreeNode 类型，不足之处可使用继承拓张
+ */
 export interface TreeNode<T extends Unit = Unit> {
   key: string | number;
   label: string;
@@ -28,10 +47,52 @@ export interface TreeNode<T extends Unit = Unit> {
   children?: TreeNode<T>[];
   [k: string]: unknown;
 }
+export type TreeNodeLike = TreeNode & any;
+
+/**
+ * 常见的 Node 类型，不足之处可使用继承拓展
+ */
 export interface NodeOptions extends IOption {
   children?: NodeOptions[];
 }
 
+/**
+ * 字段别名类型
+ */
+export interface FieldNames {
+  label: string;
+  value: string;
+  key: string;
+  icon: string;
+  name: string;
+  count: string;
+  children: string;
+  [k: string]: any;
+}
+export type PartialFieldNames = Partial<FieldNames>;
+
+/**
+ * 生成字段别名配置
+ * @param defaultValue 默认值
+ * @returns
+ */
+export const genFieldNames = (defaultValue?: Partial<FieldNames>): FieldNames => ({
+  key: "key",
+  label: "label",
+  value: "value",
+  icon: "icon",
+  name: "name",
+  children: "children",
+  count: "count",
+  ...(defaultValue || {}),
+});
+
+/**
+ * 生成以指定字段为 key 的 options map
+ * @param options
+ * @param _fieldNames
+ * @returns
+ */
 export const genOptionMap = (options: IOption[], _fieldNames: Partial<FieldNames> = genFieldNames()) => {
   const fieldNames = merge(genFieldNames(), _fieldNames);
 
@@ -62,30 +123,6 @@ export interface ListResults<T = unknown> {
   data: T[];
   count: number;
 }
-
-export type AnyKey = keyof any;
-
-export interface FieldNames {
-  label: string;
-  value: string;
-  key: string;
-  icon: string;
-  name: string;
-  count: string;
-  children: string;
-  [k: string]: any;
-}
-export type PartialFieldNames = Partial<FieldNames>;
-export const genFieldNames = (defaultValue?: Partial<FieldNames>): FieldNames => ({
-  key: "key",
-  label: "label",
-  value: "value",
-  icon: "icon",
-  name: "name",
-  children: "children",
-  count: "count",
-  ...(defaultValue || {}),
-});
 
 export const PrivateID = "__pid__";
 export type UnionPrivateID<T> = T & { [PrivateID]: string };
