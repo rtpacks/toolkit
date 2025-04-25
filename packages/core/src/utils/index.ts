@@ -60,11 +60,11 @@ export interface NodeOptions extends IOption {
  * 字段别名类型
  */
 export interface FieldNames {
-  label: string;
-  value: string;
   key: string;
+  label: string;
+  title: string;
+  value: string;
   icon: string;
-  name: string;
   count: string;
   children: string;
   [k: string]: any;
@@ -79,9 +79,9 @@ export type PartialFieldNames = Partial<FieldNames>;
 export const genFieldNames = (defaultValue?: Partial<FieldNames>): FieldNames => ({
   key: "key",
   label: "label",
+  title: "title",
   value: "value",
   icon: "icon",
-  name: "name",
   children: "children",
   count: "count",
   ...(defaultValue || {}),
