@@ -1,3 +1,12 @@
+# [0.1.0](https://github.com/rtpacks/toolkit/compare/v0.0.9...v0.1.0) (2025-04-25)
+
+
+### Features
+
+* **utils:** Optimize the FieldNames interface, remove the deprecated name field ([9831af5](https://github.com/rtpacks/toolkit/commit/9831af5bd79d357ede1a0995c25f7b24defe9b17))
+
+
+
 ## [0.0.9](https://github.com/rtpacks/toolkit/compare/v0.0.8...v0.0.9) (2025-04-25)
 
 
