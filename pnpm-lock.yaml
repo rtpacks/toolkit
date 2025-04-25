@@ -42,8 +42,8 @@ importers:
         specifier: ^22.2.0
         version: 22.2.0
       '@types/rollup-plugin-progress':
-        specifier: ^1.1.5
-        version: 1.1.5
+        specifier: ^1.1.6
+        version: 1.1.6
       '@vitejs/plugin-vue':
         specifier: ^5.1.2
         version: 5.1.2(vite@5.4.0(@types/node@22.2.0))(vue@3.4.37(typescript@5.5.4))
@@ -1234,8 +1234,8 @@ packages:
   '@types/responselike@1.0.3':
     resolution: {integrity: sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw==}
 
-  '@types/rollup-plugin-progress@1.1.5':
-    resolution: {integrity: sha512-x8aEgIhNrSl4pF2bVivAPWAVg2q9g1/Jsc3SeRhUAWGE1BAd8QVWQITO/GTsXZa3vtfYgdyqFNBH8cUuN/cQpQ==}
+  '@types/rollup-plugin-progress@1.1.6':
+    resolution: {integrity: sha512-pJeqZOFLqZ7DV9xfR5Kq/8ATIxbdNyPOqmS1APBvilY/1BOE54OAxdR10pX9x7J0w/Uws18etTseM3R1dzCosg==}
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
@@ -6123,7 +6123,7 @@ snapshots:
     dependencies:
       '@types/node': 22.2.0
 
-  '@types/rollup-plugin-progress@1.1.5':
+  '@types/rollup-plugin-progress@1.1.6':
     dependencies:
       rollup: 0.63.5
 
