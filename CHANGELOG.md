@@ -1,3 +1,12 @@
+## [0.1.1](https://github.com/rtpacks/toolkit/compare/v0.1.0...v0.1.1) (2025-04-27)
+
+
+### Features
+
+* **core:** Add FieldNames parent field ([db35e78](https://github.com/rtpacks/toolkit/commit/db35e78c5be012e72069688b35f61e790e86706e))
+
+
+
 # [0.1.0](https://github.com/rtpacks/toolkit/compare/v0.0.9...v0.1.0) (2025-04-25)
 
 
