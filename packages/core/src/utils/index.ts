@@ -66,6 +66,7 @@ export interface FieldNames {
   value: string;
   icon: string;
   count: string;
+  parent: string;
   children: string;
   [k: string]: any;
 }
@@ -82,8 +83,9 @@ export const genFieldNames = (defaultValue?: Partial<FieldNames>): FieldNames =>
   title: "title",
   value: "value",
   icon: "icon",
-  children: "children",
   count: "count",
+  parent: "parent",
+  children: "children",
   ...(defaultValue || {}),
 });
 
