@@ -37,4 +37,9 @@ export const packages: PackageManifest[] = [
     outDir: "packages/vue/dist",
     external: ["vue-router"],
   },
+  // @rtpackx/nestjs
+  {
+    entry: "packages/nestjs/index.ts",
+    outDir: "packages/nestjs/dist",
+  },
 ];

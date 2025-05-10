@@ -26,7 +26,7 @@ export const alias: Alias[] = [
     replacement: resolve(__dirname, "../packages/react/index"),
   },
   {
-    find: "@rtpackx/form",
-    replacement: resolve(__dirname, "../packages/form/index"),
+    find: "@rtpackx/nestjs",
+    replacement: resolve(__dirname, "../packages/nestjs/index"),
   },
 ];
