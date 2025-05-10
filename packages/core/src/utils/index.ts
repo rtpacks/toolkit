@@ -1,18 +1,16 @@
 import { merge } from "lodash-es";
 
+export * from "./is";
+export * from "./trait";
+
+export type ValueType<T, K extends keyof T> = T[K];
 export type UnionNull<T> = T | null;
 export type UnionUndefined<T> = T | undefined;
 export type UnionNone<T> = UnionNull<T> | UnionUndefined<T>;
+
 export type DeepPartial<T> = {
   [K in keyof T]?: DeepPartial<T[K]>;
 };
-
-/**
- * 错误特征
- */
-export interface ErrorTrait<T = boolean> {
-  error: T;
-}
 
 /**
  * 所有 key 类型
@@ -34,6 +32,9 @@ export interface IOption<T extends Unit = Unit> {
   value: T;
   [k: string]: unknown;
 }
+export interface NodeOptions extends IOption {
+  children?: NodeOptions[];
+}
 
 /**
  * 常见的 TreeNode 类型，不足之处可使用继承拓张
@@ -48,13 +49,6 @@ export interface TreeNode<T extends Unit = Unit> {
   [k: string]: unknown;
 }
 export type TreeNodeLike = TreeNode & any;
-
-/**
- * 常见的 Node 类型，不足之处可使用继承拓展
- */
-export interface NodeOptions extends IOption {
-  children?: NodeOptions[];
-}
 
 /**
  * 字段别名类型
@@ -111,11 +105,6 @@ export interface HttpResponse<T = unknown> {
   status: number;
   errMsg: string;
   errCode: number;
-  data: T;
-}
-export interface ResponseWrap<T = unknown> {
-  errCode: number;
-  errMsg: string;
   data: T;
 }
 
