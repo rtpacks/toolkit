@@ -1,3 +1,12 @@
+## [0.1.3](https://github.com/rtpacks/toolkit/compare/v0.1.2...v0.1.3) (2025-05-10)
+
+
+### Features
+
+* **nestjs:** Add Assert utility class for parameter validation ([91dc862](https://github.com/rtpacks/toolkit/commit/91dc8628da3c1be4d43df6427c4fb23fa648a4ef))
+
+
+
 ## [0.1.2](https://github.com/rtpacks/toolkit/compare/v0.1.1...v0.1.2) (2025-05-10)
 
 
