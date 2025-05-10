@@ -30,7 +30,7 @@ export interface IOption<T extends Unit = Unit> {
   key: string | number;
   label: string;
   value: T;
-  [k: string]: unknown;
+  [k: string]: any;
 }
 export interface NodeOptions extends IOption {
   children?: NodeOptions[];
@@ -46,7 +46,7 @@ export interface TreeNode<T extends Unit = Unit> {
   icon?: string;
   count?: number;
   children?: TreeNode<T>[];
-  [k: string]: unknown;
+  [k: string]: any;
 }
 export type TreeNodeLike = TreeNode & any;
 
