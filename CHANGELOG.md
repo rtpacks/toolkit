@@ -1,3 +1,15 @@
+## [0.1.2](https://github.com/rtpacks/toolkit/compare/v0.1.1...v0.1.2) (2025-05-10)
+
+
+### Features
+
+* **core:** Add diffNow utility for time difference calculation ([9be0850](https://github.com/rtpacks/toolkit/commit/9be085010bbd69e3a641eed40a5ce71a726ac177))
+* **core:** Add ErrorTrait and CheckedTrait interfaces ([70b9c0a](https://github.com/rtpacks/toolkit/commit/70b9c0afdd27df6c4742486b24b4f467292da014))
+* **core:** Add utility functions for type checks and IP validation ([f4658af](https://github.com/rtpacks/toolkit/commit/f4658af5ed0fdc172e7fc873ae59c8c994a9ba55))
+* **core:** Simplify types and export utilities ([02dcb3f](https://github.com/rtpacks/toolkit/commit/02dcb3f4f5c310964fd9869ee19d892bc6c3dd5d))
+
+
+
 ## [0.1.1](https://github.com/rtpacks/toolkit/compare/v0.1.0...v0.1.1) (2025-04-27)
 
 
