@@ -1,3 +1,12 @@
+## [0.1.4](https://github.com/rtpacks/toolkit/compare/v0.1.3...v0.1.4) (2025-05-10)
+
+
+### Features
+
+* **core:** Update index.ts to use 'any' for unknown keys ([02d272b](https://github.com/rtpacks/toolkit/commit/02d272ba0e27432ecbbee0a5912941a25857e133))
+
+
+
 ## [0.1.3](https://github.com/rtpacks/toolkit/compare/v0.1.2...v0.1.3) (2025-05-10)
 
 
