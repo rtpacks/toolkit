@@ -1,0 +1,89 @@
+import { BadRequestException, HttpException, NotFoundException } from "@nestjs/common";
+import { isMobilePhone, isEmail } from "class-validator";
+
+export class Assert {
+  /**
+   * 非空断言
+   * @param val
+   * @param msg
+   */
+  static assertNotNil<T>(val: T | null | undefined, msg = "参数不能为空"): asserts val is T {
+    // asserts 表示这个函数会在运行时断言传入的参数不为空，如果为空则会抛出异常。
+    if (val === null || val === undefined) {
+      throw new BadRequestException(msg);
+    }
+  }
+
+  /**
+   * 非空断言
+   * @param val
+   */
+  static isNotEmpty<T>(val: T | null | undefined): asserts val is T {
+    Assert.assertNotNil(val);
+  }
+
+  /**
+   * 非空对象
+   */
+  static isNotEmptyObject<T>(val: T | unknown, msg = "参数为空对象"): asserts val is T {
+    Assert.assertNotNil(val);
+    if (Object.keys(val as any).length === 0) throw new BadRequestException(msg);
+  }
+
+  /**
+   * 非null断言
+   * @param val
+   * @param msg
+   */
+  static isNotNull<T>(val: T | unknown, msg = "参数不能为 null"): asserts val is T {
+    if (val === null) throw new BadRequestException(msg);
+  }
+
+  /**
+   * 非undefined断言
+   * @param val
+   * @param msg
+   */
+  static isNotUndefiend<T>(val: T | undefined, msg = "参数不能为 undefined"): asserts val is T {
+    if (val === null) throw new BadRequestException(msg);
+  }
+
+  /**
+   * 非0断言
+   * @param val
+   * @param msg
+   */
+  static isNotZero(val: number, msg = "参数不能为0"): asserts val is number {
+    if (val === 0) throw new BadRequestException(msg);
+  }
+
+  /**
+   * 手机号断言
+   * @param val
+   * @param msg
+   */
+  static isMobilePhone<T>(val: T, msg = "请输入正确的手机号"): asserts val is T {
+    if (!isMobilePhone(val)) {
+      throw new BadRequestException(msg);
+    }
+  }
+
+  /**
+   * 邮箱断言
+   * @param val
+   * @param msg
+   */
+  static isEmail(val: string, msg = "请输入正确的邮箱"): asserts val is string {
+    if (!isEmail(val)) throw new BadRequestException(msg);
+  }
+
+  /**
+   * 相等断言
+   * @param v1
+   * @param v2
+   * @param msg
+   */
+  static isEqual<T>(v1: T, v2: T, msg = "参数不相同"): asserts v1 is T {
+    if (v1 !== v2) throw new BadRequestException(msg);
+  }
+}
