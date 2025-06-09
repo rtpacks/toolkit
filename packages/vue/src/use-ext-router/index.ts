@@ -59,11 +59,28 @@ export const useExtRouter = (router: Router) => {
     }
   };
 
+  const evalCtrlNavigate = (event: MouseEvent, url: string, replace?: boolean) => {
+    const isModifierKeyPressed = event.ctrlKey || event.metaKey;
+
+    if (isModifierKeyPressed) {
+      window.open(url, "_blank"); // 新标签页打开
+      return;
+    }
+
+    if (replace) {
+      router.replace(url);
+    } else {
+      router.push(url);
+    }
+  };
+
   return {
     resetRouter,
     deepDelete,
     addRoutes,
     goBackOrDefault,
+    evalCtrlNavigate,
+    smartCtrlNavigate: evalCtrlNavigate,
   };
 };
 
