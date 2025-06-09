@@ -66,18 +66,18 @@ export const useExtRouter = (router: Router) => {
    * @param url - 目标导航地址
    * @param replace - 可选参数，是否替换当前历史记录（默认false，即新增历史记录）
    */
-  const evalCtrlNavigate = (event: MouseEvent, url: string, replace?: boolean) => {
+  const evalCtrlNavigate = async (event: MouseEvent, url: string, replace?: boolean) => {
     const isModifierKeyPressed = event.ctrlKey || event.metaKey;
 
     if (isModifierKeyPressed) {
-      window.open(url, "_blank"); // 新标签页打开
+      await window.open(url, "_blank"); // 新标签页打开
       return;
     }
 
     if (replace) {
-      router.replace(url);
+      await router.replace(url);
     } else {
-      router.push(url);
+      await router.push(url);
     }
   };
 
