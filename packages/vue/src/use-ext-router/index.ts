@@ -59,6 +59,13 @@ export const useExtRouter = (router: Router) => {
     }
   };
 
+  /**
+   * 根据 Ctrl/Cmd 键状态智能执行页面导航
+   *
+   * @param event - 鼠标点击事件对象，用于检测是否按下 Ctrl(Windows)或 Meta(Mac)键
+   * @param url - 目标导航地址
+   * @param replace - 可选参数，是否替换当前历史记录（默认false，即新增历史记录）
+   */
   const evalCtrlNavigate = (event: MouseEvent, url: string, replace?: boolean) => {
     const isModifierKeyPressed = event.ctrlKey || event.metaKey;
 
