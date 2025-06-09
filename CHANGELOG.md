@@ -1,3 +1,13 @@
+# [0.2.0](https://github.com/rtpacks/toolkit/compare/v0.1.4...v0.2.0) (2025-06-09)
+
+
+### Features
+
+* **core:** Add `connect` utility function for string manipulation ([122c111](https://github.com/rtpacks/toolkit/commit/122c11184ca809a3ebd5a37377e9a00c396fcd27))
+* **vue:** Add evalCtrlNavigate and smartCtrlNavigate functions ([c445139](https://github.com/rtpacks/toolkit/commit/c44513961e520e14cf313efbf893f8fe0edc3450))
+
+
+
 ## [0.1.4](https://github.com/rtpacks/toolkit/compare/v0.1.3...v0.1.4) (2025-05-10)
 
 
