@@ -1,3 +1,17 @@
+## [0.2.1](https://github.com/rtpacks/toolkit/compare/v0.2.0...v0.2.1) (2025-06-09)
+
+
+### Bug Fixes
+
+* **vue:** Make evalCtrlNavigate async for better navigation ([e169e71](https://github.com/rtpacks/toolkit/commit/e169e716db77d4b8d08467fc86c880fdf3189946))
+
+
+### Features
+
+* **vue:** Add evalCtrlNavigate for smart page navigation ([7f96403](https://github.com/rtpacks/toolkit/commit/7f96403c5f65eaa4d1d82f83acad2c8634d077da))
+
+
+
 # [0.2.0](https://github.com/rtpacks/toolkit/compare/v0.1.4...v0.2.0) (2025-06-09)
 
 
