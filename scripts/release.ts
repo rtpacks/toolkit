@@ -19,4 +19,4 @@ execSync(`git tag -a v${version} -m "v${version}"`, { stdio: "inherit" });
 // The changelog will be generated only after tagging. Therefore, you must execute `pnpm changelog` after tagging.
 execSync("pnpm changelog");
 execSync("git add .", { stdio: "inherit" });
-execSync(`git commit -m "chore: release v${version}"`, { stdio: "inherit" });
+execSync(`git commit -m "docs: release v${version}"`, { stdio: "inherit" });
