@@ -153,3 +153,22 @@ export const inRangeFn = (
  * @returns {any}
  */
 export const asAnyType = (value: any): any => value;
+
+/**
+ * 通用函数类型别名
+ */
+export type Fn = (...args: any[]) => any;
+
+/**
+ * AsyncifyFnReturn
+ */
+export type AsyncifyFnReturn<T extends Fn> = (...args: Parameters<T>) => Promise<ReturnType<T>>;
+
+/**
+ * 将函数类型转化为异步函数
+ * @param fn 待转换的函数
+ * @returns {fn} 转换后的异步函数
+ */
+export const asyncify = <T extends Fn>(fn: T): AsyncifyFnReturn<T> => {
+  return (...args) => Promise.resolve(fn(...args));
+};
