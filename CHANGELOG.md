@@ -1,3 +1,12 @@
+## [0.2.3](https://github.com/rtpacks/toolkit/compare/v0.2.2...v0.2.3) (2025-06-11)
+
+
+### Features
+
+* **core:** Add utility functions for IP, datetime, domain, and file/blob checks ([0955cc6](https://github.com/rtpacks/toolkit/commit/0955cc697d0227aa201cc277dec118e09cef0348))
+
+
+
 ## [0.2.2](https://github.com/rtpacks/toolkit/compare/v0.2.1...v0.2.2) (2025-06-11)
 
 
