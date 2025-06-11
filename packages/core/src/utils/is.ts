@@ -50,7 +50,7 @@ export const isDateTimeStr = (str: string) => {
   );
 };
 
-export const isDomain = (str: string) => {
+export const isDomainName = (str: string) => {
   return /^(?=^.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$/.test(str);
 };
 
