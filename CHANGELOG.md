@@ -1,3 +1,12 @@
+## [0.2.4](https://github.com/rtpacks/toolkit/compare/v0.2.3...v0.2.4) (2025-06-11)
+
+
+### Features
+
+* **core:** Rename isDomain to isDomainName for clarity ([e67e0ac](https://github.com/rtpacks/toolkit/commit/e67e0ac4978f9c75cce87f9cecad0c411654afff))
+
+
+
 ## [0.2.3](https://github.com/rtpacks/toolkit/compare/v0.2.2...v0.2.3) (2025-06-11)
 
 
