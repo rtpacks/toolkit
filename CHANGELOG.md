@@ -1,3 +1,12 @@
+## [0.2.2](https://github.com/rtpacks/toolkit/compare/v0.2.1...v0.2.2) (2025-06-11)
+
+
+### Features
+
+* **core:** Add asyncify utility for converting sync functions to async ([0db8134](https://github.com/rtpacks/toolkit/commit/0db813473fee81db0bc43a9f67a65e7746ffdaa8))
+
+
+
 ## [0.2.1](https://github.com/rtpacks/toolkit/compare/v0.2.0...v0.2.1) (2025-06-09)
 
 
