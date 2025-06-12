@@ -1,3 +1,12 @@
+## [0.2.6](https://github.com/rtpacks/toolkit/compare/v0.2.5...v0.2.6) (2025-06-12)
+
+
+### Features
+
+* **vue:** Add isCtrlNavigate to useExtRouter for ctrl/meta key handling ([3ff1b99](https://github.com/rtpacks/toolkit/commit/3ff1b9992119572a2d6389e29253821173d8ebcf))
+
+
+
 ## [0.2.5](https://github.com/rtpacks/toolkit/compare/v0.2.4...v0.2.5) (2025-06-12)
 
 
