@@ -1,3 +1,12 @@
+## [0.2.5](https://github.com/rtpacks/toolkit/compare/v0.2.4...v0.2.5) (2025-06-12)
+
+
+### Features
+
+* **vue:** Handle undefined event in evalCtrlNavigate ([bec533f](https://github.com/rtpacks/toolkit/commit/bec533fbd1962bf4593f1dd63ed7fd607c20e1de))
+
+
+
 ## [0.2.4](https://github.com/rtpacks/toolkit/compare/v0.2.3...v0.2.4) (2025-06-11)
 
 
