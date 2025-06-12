@@ -81,6 +81,10 @@ export const useExtRouter = (router: Router) => {
     }
   };
 
+  const isCtrlNavigate = (event: MouseEvent | undefined) => {
+    return Boolean(event?.ctrlKey || event?.metaKey);
+  };
+
   return {
     resetRouter,
     deepDelete,
@@ -88,6 +92,7 @@ export const useExtRouter = (router: Router) => {
     goBackOrDefault,
     evalCtrlNavigate,
     smartCtrlNavigate: evalCtrlNavigate,
+    isCtrlNavigate,
   };
 };
 
