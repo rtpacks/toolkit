@@ -1,3 +1,17 @@
+## [0.2.7](https://github.com/rtpacks/toolkit/compare/v0.2.6...v0.2.7) (2025-06-26)
+
+
+### Bug Fixes
+
+* **core:** repair isDomainname fn ([61a442f](https://github.com/rtpacks/toolkit/commit/61a442f77e69db025c6944ba90c97fc05ec89c1d))
+
+
+### Features
+
+* **core:** add use cache Hook ([7861cc1](https://github.com/rtpacks/toolkit/commit/7861cc17830652d6f87a8a2e59ae81777aea00ed))
+
+
+
 ## [0.2.6](https://github.com/rtpacks/toolkit/compare/v0.2.5...v0.2.6) (2025-06-12)
 
 
