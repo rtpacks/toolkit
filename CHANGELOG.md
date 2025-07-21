@@ -1,3 +1,13 @@
+## [0.2.8](https://github.com/rtpacks/toolkit/compare/v0.2.7...v0.2.8) (2025-07-21)
+
+
+### Features
+
+* **core:** add BaseType and other types ([f935304](https://github.com/rtpacks/toolkit/commit/f935304940f404a23e63275500a17a1d52ec6681))
+* **vue:** add RenderContent type ([ea83b10](https://github.com/rtpacks/toolkit/commit/ea83b109d0ba17d7078c32ec1babfa7bc8789d3a))
+
+
+
 ## [0.2.7](https://github.com/rtpacks/toolkit/compare/v0.2.6...v0.2.7) (2025-06-26)
 
 
