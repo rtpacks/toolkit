@@ -22,6 +22,9 @@ export type AnyKey = keyof any;
  * 单元类型
  */
 export type Unit<T = unknown> = T extends unknown ? string | number : string | number | T;
+export type BaseType = string | number;
+export type UnionType = BaseType | Record<string, any>;
+export type Data = Record<string, any>;
 
 /**
  * 常见的 Option 类型，不足之处可使用继承拓展
