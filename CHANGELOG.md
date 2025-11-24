@@ -1,3 +1,21 @@
+# [0.3.0](https://github.com/rtpacks/toolkit/compare/v0.2.8...v0.3.0) (2025-11-24)
+
+
+### Bug Fixes
+
+* **core:** avoid ignoring the default export ([dfe9e6c](https://github.com/rtpacks/toolkit/commit/dfe9e6c596eac2b5c44e5b1a497f901ebbf79cc7))
+* **vite:** remove compress plugin ([72628c4](https://github.com/rtpacks/toolkit/commit/72628c4f00c8024e9b9156777ab69fe75ad76522))
+* **vue:** avoid ignoring the default export ([95370ea](https://github.com/rtpacks/toolkit/commit/95370eafc1e77162de839403fe290750fd8ad20a))
+
+
+### Features
+
+* **react:** entry ([07683f5](https://github.com/rtpacks/toolkit/commit/07683f544a6cf3ef4a1919036438ceca5b0e225c))
+* **vite:** add exports ([56a9f2b](https://github.com/rtpacks/toolkit/commit/56a9f2bca58248774ece086915b9716b8b965a6c))
+* **vite:** add useful plugins ([203b767](https://github.com/rtpacks/toolkit/commit/203b767844eeb92c268532f22f5af9894420a461))
+
+
+
 ## [0.2.8](https://github.com/rtpacks/toolkit/compare/v0.2.7...v0.2.8) (2025-07-21)
 
 
