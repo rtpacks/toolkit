@@ -10,7 +10,7 @@ export interface PackageManifest {
   /* feature 额外的拓展 */
   author?: string;
   description?: string;
-  external?: string[];
+  external?: Array<string | RegExp>;
   globals?: Record<string, string>;
   manualImport?: boolean;
   deprecated?: boolean;
@@ -31,15 +31,23 @@ export const packages: PackageManifest[] = [
     entry: "packages/core/src/index.ts",
     outDir: "packages/core/dist",
   },
-  // @rtpackx/vue
-  {
-    entry: "packages/vue/src/index.ts",
-    outDir: "packages/vue/dist",
-    external: ["vue-router"],
-  },
   // @rtpackx/nestjs
   {
     entry: "packages/nestjs/src/index.ts",
     outDir: "packages/nestjs/dist",
+    external: [/@nestjs\/.*/],
+  },
+  {
+    entry: "packages/react/src/index.ts",
+    outDir: "packages/react/dist",
+  },
+  {
+    entry: "packages/vite/src/index.ts",
+    outDir: "packages/vite/dist",
+  },
+  {
+    entry: "packages/vue/src/index.ts",
+    outDir: "packages/vue/dist",
+    external: ["vue-router"],
   },
 ];

@@ -12,7 +12,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 fs.removeSync(resolve(__dirname, "../packages/auto-imports.d.ts"));
 fs.removeSync(resolve(__dirname, "../packages/.eslintrc-auto-import.json"));
 
-const externals = ["vue", "vue-router", "vue-demi", "@vueuse/core"];
+const externals: Array<string | RegExp> = ["vue", "vue-router", "vue-demi", "@vueuse/core", "fsevents"];
 const execFn = async () => {
   for (const manifest of packages) {
     const { useVue, entry, outDir, outputFileName, external } = manifest;
@@ -27,7 +27,6 @@ const execFn = async () => {
           fileName: (format) => `${outputFileName ?? "index"}.${format === "es" ? "mjs" : format}`,
         },
         minify: true,
-        emptyOutDir: false,
         rollupOptions: {
           external: externals.concat(external ?? []),
         },
