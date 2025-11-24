@@ -178,6 +178,8 @@ importers:
 
   packages/react: {}
 
+  packages/vite: {}
+
   packages/vue:
     dependencies:
       '@rtpackx/core':
