@@ -28,18 +28,18 @@ export interface PackageManifest {
 export const packages: PackageManifest[] = [
   // @rtpackx/core
   {
-    entry: "packages/core/index.ts",
+    entry: "packages/core/src/index.ts",
     outDir: "packages/core/dist",
   },
   // @rtpackx/vue
   {
-    entry: "packages/vue/index.ts",
+    entry: "packages/vue/src/index.ts",
     outDir: "packages/vue/dist",
     external: ["vue-router"],
   },
   // @rtpackx/nestjs
   {
-    entry: "packages/nestjs/index.ts",
+    entry: "packages/nestjs/src/index.ts",
     outDir: "packages/nestjs/dist",
   },
 ];
