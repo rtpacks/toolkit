@@ -18,8 +18,7 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
-    },
-    "./*": "./*"
+    }
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -28,6 +27,9 @@
     "*.d.ts",
     "dist"
   ],
+  "dependencies": {
+    "@rtpackx/core": "workspace:*"
+  },
   "peerDependencies": {
     "vue": "^3.0.0",
     "vue-router": "^4.0.0"
