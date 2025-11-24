@@ -3,7 +3,7 @@ import type { Unit } from "../utils";
 
 export type TransFormFn<T extends Unit = Unit> = (v: string, index: number, arr: string[]) => T;
 
-export default function useSpliter(spliter = ":") {
+export function useSpliter(spliter = ":") {
   /**
    * 拼接方法
    * @param prev
@@ -44,3 +44,4 @@ export default function useSpliter(spliter = ":") {
     take,
   };
 }
+export default useSpliter;
