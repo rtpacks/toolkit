@@ -7,7 +7,7 @@ export interface ICheckableTrait {
 
 export type Item = ICheckableTrait & Record<string, unknown>;
 
-export default function useSelect<T extends Item = Item>(
+export function useSelect<T extends Item = Item>(
   initValue: T[] = [],
   options = { id: "id", all: [] as T[] },
 ) {
@@ -122,3 +122,4 @@ export default function useSelect<T extends Item = Item>(
     setAllItems,
   };
 }
+export default useSelect;

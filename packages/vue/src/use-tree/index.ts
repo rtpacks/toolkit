@@ -1,7 +1,6 @@
 import { ref, computed } from "vue";
 import { merge } from "lodash-es";
-
-export type Unit = string | number;
+import { Unit } from "@rtpackx/core";
 
 export interface INode {
   id: Unit;
@@ -29,15 +28,11 @@ export interface TreeOption {
   };
 }
 
-const genDefaultTreeOption = (): TreeOption => ({
-  fieldNames: {
-    id: "id",
-    parent: "parent",
-    children: "children",
-  },
+export const genDefaultTreeOption = (): TreeOption => ({
+  fieldNames: { id: "id", parent: "parent", children: "children" },
 });
 
-export default function useTree(_nodes: INode[], option: Partial<TreeOption> = genDefaultTreeOption()) {
+export function useTree(_nodes: INode[], option: Partial<TreeOption> = genDefaultTreeOption()) {
   option = merge(option, genDefaultTreeOption());
   const { fieldNames } = option as TreeOption;
 
@@ -148,3 +143,5 @@ export default function useTree(_nodes: INode[], option: Partial<TreeOption> = g
     isChecked,
   };
 }
+
+export default useTree;
