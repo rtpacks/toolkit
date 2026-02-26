@@ -53,9 +53,9 @@ export const useExtRouter = (router: Router) => {
     if (window?.history?.length > level) {
       router.back();
     } else if (defaultRoute) {
-      router.push(defaultRoute);
+      router.replace(defaultRoute);
     } else {
-      throw new Error("跳转失败");
+      throw new Error("Unable to go back or navigate to default route");
     }
   };
 
